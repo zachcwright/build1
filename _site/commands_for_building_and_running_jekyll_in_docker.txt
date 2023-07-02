@@ -1,0 +1,10 @@
+create jekyll template site command: export site_name="my-blog" && export MSYS_NO_PATHCONV=1
+docker run --rm \
+  --volume="$PWD:/srv/jekyll" \
+  -it jekyll/jekyll \
+  sh -c "chown -R jekyll /usr/gem/ && jekyll new $site_name" \
+  && cd $site_name
+
+docker serve command: docker run --rm   --volume="$PWD:/srv/jekyll:Z"   -p 4000:4000   jekyll/jekyll:4.2.0   jekyll serve
+
+go to the browser and put in the address line: http://localhost:4000/
