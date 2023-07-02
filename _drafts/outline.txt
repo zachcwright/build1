@@ -1,7 +1,15 @@
 Plan for the blog notes:
 1. Setting up Jekyll
     1.1. Downloaded and installed Docker software
-    1.2. Create Jekyll site (need to figure out how)
+    1.2. Create Jekyll site (need to figure out how):
+        1.2.1. Create jekyll template site command: 
+        export site_name="my-blog" && export MSYS_NO_PATHCONV=1
+docker run --rm \
+  --volume="$PWD:/srv/jekyll" \
+  -it jekyll/jekyll \
+  sh -c "chown -R jekyll /usr/gem/ && jekyll new $site_name" \
+  && cd $site_name
+
     1.3. Start Jekyll in Docker
         1.3.1 - put the command for running Jekyll in Docker:
             docker run --rm --label=jekyll --volume=C:\Users\zachc\my-blog:/srv/jekyll  -it -p 4000:4000 jekyll/jekyll:4.2.0 jekyll serve --watch --force_polling
