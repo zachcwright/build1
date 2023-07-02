@@ -22,7 +22,7 @@ title: Here are some posts!
 email: zachfromnc@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   This blog can trace it's roots all the way back to June of 2023. Time really flies when you're having fun.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/my-blog" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: twitter is overrated
 github_username:  tbd
