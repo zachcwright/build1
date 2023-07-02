@@ -1,0 +1,20 @@
+Plan for the blog notes:
+1. Setting up Jekyll
+    1.1. Downloaded and installed Docker software
+    1.2. Create Jekyll site (need to figure out how)
+    1.3. Start Jekyll in Docker
+        1.3.1 - put the command for running Jekyll in Docker:
+            docker run --rm --label=jekyll --volume=C:\Users\zachc\my-blog:/srv/jekyll  -it -p 4000:4000 jekyll/jekyll:4.2.0 jekyll serve --watch --force_polling
+
+2. Creating/Editing Jekyll site pages
+    1.1. Where a page should be added (_posts directory)
+    1.2. How hightlight works in Jekyll
+    1.3. What is Markdown
+
+3. Git commands:
+    1.0. git status - what is it and why we need it.
+    1.1. git add - write how it works `git add <file name>`
+    1.2. git commit - write how git commit command works `git commit -m "commit message"
+    1.3. git push - what is it and why we need it
+    1.4. git log ...
+
