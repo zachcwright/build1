@@ -1,0 +1,10 @@
+I"P<p>Pushing to Github</p>
+
+<p>In this post we will discuss how to commit a post to github using a terminal</p>
+
+<ol>
+  <li>git add- to add the specific file to staging state</li>
+  <li>git commit- to commit into local git repository to prepare file to be pushed</li>
+  <li>git push- to push local changes to remote repository</li>
+</ol>
+:ET

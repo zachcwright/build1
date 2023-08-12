@@ -1,0 +1,8 @@
+I"—<p>this is the test snippet with a change</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">print_hello_python</span><span class="p">()</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"Hello world!"</span><span class="p">)</span></code></pre></figure>
+
+<p>If you want to google - use this link</p>
+
+:ET

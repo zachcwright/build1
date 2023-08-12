@@ -1,0 +1,33 @@
+I"¡<p>In this post we will go over how to initiate and run jekyll in docker.</p>
+
+<p>1.To create jekyll template site use the command:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">export </span><span class="nv">site_name</span><span class="o">=</span><span class="s2">"my-blog"</span> <span class="o">&amp;&amp;</span> <span class="nb">export </span><span class="nv">MSYS_NO_PATHCONV</span><span class="o">=</span>1
+docker run <span class="nt">--rm</span> <span class="se">\
+</span>
+  <span class="nt">--volume</span><span class="o">=</span><span class="s2">"</span><span class="nv">$PWD</span><span class="s2">:/srv/jekyll"</span> <span class="se">\
+</span>
+  <span class="nt">-it</span> jekyll/jekyll <span class="se">\
+</span>
+  sh <span class="nt">-c</span> <span class="s2">"chown -R jekyll /usr/gem/ &amp;&amp; jekyll new </span><span class="nv">$site_name</span><span class="s2">"</span> <span class="se">\
+</span>
+  <span class="o">&amp;&amp;</span> <span class="nb">cd</span> <span class="nv">$site_name</span> 
+  </code></pre></figure>
+
+<p>2.How to start Jekyll in docker on Windows in VSCode</p>
+
+<ul>
+  <li>open the VSCode console by clicking: Ctrl+`</li>
+  <li>paste in the terminal the next command: cd C:\Users\zachc\my-blog</li>
+  <li>paste docker serve command in VSCode console:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">  docker run <span class="nt">--rm</span>   <span class="nt">--volume</span><span class="o">=</span><span class="s2">"</span><span class="k">${</span><span class="nv">PWD</span><span class="k">}</span><span class="s2">:/srv/jekyll:Z"</span>
+    <span class="nt">-p</span> 4000:4000   jekyll/jekyll:4.2.0   jekyll serve <span class="nt">--watch</span> <span class="nt">--force_polling</span>
+  </code></pre></figure>
+
+<ul>
+  <li>go to the browser and put in the address line: http://localhost:4000/my-blog/</li>
+</ul>
+
+:ET

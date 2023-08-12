@@ -1,0 +1,25 @@
+I"�<p>create jekyll template site command: export site_name=”my-blog” &amp;&amp; export MSYS_NO_PATHCONV=1
+docker run –rm <br />
+  –volume=”$PWD:/srv/jekyll” <br />
+  -it jekyll/jekyll <br />
+  sh -c “chown -R jekyll /usr/gem/ &amp;&amp; jekyll new $site_name” <br />
+  &amp;&amp; cd $site_name</p>
+
+<p>docker serve command for git console:
+docker run –rm   –volume=”$PWD:/srv/jekyll:Z”   -p 4000:4000   jekyll/jekyll:4.2.0   jekyll serve</p>
+
+<p>How to start Jekyll in docker on Windows in VSCode</p>
+<ol>
+  <li>Open the VSCode console by clicking: Ctrl+`</li>
+  <li>Paste in the terminal the next command: cd C:\Users\zachc\my-blog</li>
+  <li>Paste docker serve command in VSCode console: 
+docker run –rm   –volume=”${PWD}:/srv/jekyll:Z”   -p 4000:4000   jekyll/jekyll:4.2.0   jekyll serve –watch –force_polling</li>
+  <li>go to the browser and put in the address line: http://localhost:4000/my-blog/</li>
+</ol>
+
+<p>How to commit a post to github so it’s displayed on gh-pages
+git add- to add the specific file to staging state
+git commit- to commit into local git repository to prepare file to be pushed 
+git push- to push local changes to remote repository</p>
+
+:ET
